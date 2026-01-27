@@ -705,7 +705,7 @@ with tabs[1]:
 
 
 # =====================================================
-# TAB 3 — 🥗 FOOD INSIGHTS (FIXED & SAFE)
+# TAB 3 —  FOOD INSIGHTS (FIXED & SAFE)
 # =====================================================
 with tabs[2]:
 
@@ -743,7 +743,7 @@ with tabs[2]:
 
 
 # =====================================================
-# TAB 4 — 🧭 LIFESTYLE BLUEPRINT (FINAL UI)
+# TAB 4 —  LIFESTYLE BLUEPRINT (FINAL UI)
 # =====================================================
 with tabs[3]:
     if "results" not in st.session_state:
