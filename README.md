@@ -1,12 +1,12 @@
-\# HealthLens 
+# HealthLens 
 
 
 
-HealthLens is a preventive health intelligence web app that estimates \*\*health risk (not diagnosis)\*\* and simulates how risk may evolve over time using explainable ML.
+HealthLens is a preventive health intelligence web app that estimates health risk (not diagnosis) and simulates how risk may evolve over time using explainable ML.
 
 
 
-\##  Disclaimer
+##  Disclaimer
 
 This project does NOT provide medical diagnosis or treatment.
 
@@ -14,31 +14,31 @@ Doctors must always be consulted.
 
 
 
-\##  Conditions Covered
+##  Conditions Covered
 
-\- Diabetes
+- Diabetes
 
-\- Heart Disease
+- Heart Disease
 
-\- Hypertension
+- Hypertension
 
-\- Chronic Kidney Disease (CKD)
-
-
-
-\##  Key Features
-
-\- Explainable ML-based risk estimation
-
-\- 12-month risk trajectory simulation
-
-\- Food insights from free-text input
-
-\- Lifestyle blueprint with realistic guidance
+- Chronic Kidney Disease (CKD)
 
 
 
-\##  Tech Stack
+##  Key Features
+
+- Explainable ML-based risk estimation
+
+- 12-month risk trajectory simulation
+
+- Food insights from free-text input
+
+- Lifestyle blueprint with realistic guidance
+
+
+
+##  Tech Stack
 
 * Python
 * Streamlit
