@@ -13,3 +13,5 @@ requests
 tqdm
 joblib
 gitpython
+python-dotenv
+groq
