@@ -86,11 +86,13 @@ Return STRICT JSON ONLY:
 }}
 """
 
-    completion = client.chat.completions.create(
-        model=MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3
-    )
+clean_prompt = prompt.encode('utf-8', errors='ignore').decode('utf-8')
+
+completion = client.chat.completions.create(
+    model=MODEL,
+    messages=[{"role": "user", "content": clean_prompt}],
+    temperature=0.3
+)
 
     raw = completion.choices[0].message.content
     return _safe_json(raw)
