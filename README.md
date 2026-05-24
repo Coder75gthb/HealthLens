@@ -12,6 +12,8 @@ This project does NOT provide medical diagnosis or treatment.
 
 Doctors must always be consulted.
 
+🔗 **Live Demo:** [Click here](https://healthlens-rvyd7ypgzyywjtsnd9chng.streamlit.app/)
+
 
 
 ##  Conditions Covered
