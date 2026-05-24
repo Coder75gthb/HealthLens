@@ -6,6 +6,7 @@ import os
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 MODEL = "llama-3.1-8b-instant"
 
+
 def _safe_json(text: str):
     try:
         return json.loads(text)
@@ -14,6 +15,7 @@ def _safe_json(text: str):
         if match:
             return json.loads(match.group())
         raise ValueError("Invalid JSON from model")
+
 
 def generate_lifestyle_blueprint(
     disease: str,
@@ -26,7 +28,6 @@ def generate_lifestyle_blueprint(
 ):
     prompt = f"""
 You are generating a personalized lifestyle blueprint.
-
 USER CONTEXT:
 - Condition of concern: {disease}
 - Current risk level: {risk_percent}%
@@ -35,20 +36,16 @@ USER CONTEXT:
 - BMI: {bmi}
 - Smoking status: {"Yes" if smoker else "No"}
 - Physical activity level: {activity_level}
-
 TASK:
 Create a detailed, practical lifestyle blueprint.
 Every recommendation MUST explain why it matters for THIS user.
-
 STRICT RULES:
 - Do NOT give generic health advice
 - Tie explanations to risk level or trend
 - No medical or diagnostic claims
 - Avoid absolute words like must/always/never
 - Be realistic and sustainable
-
 Return STRICT JSON ONLY:
-
 {{
   "context_summary": "...",
   "food_strategy": {{
@@ -85,14 +82,13 @@ Return STRICT JSON ONLY:
   "confidence": "low | medium | high"
 }}
 """
+    clean_prompt = prompt.encode('utf-8', errors='ignore').decode('utf-8')
 
-clean_prompt = prompt.encode('utf-8', errors='ignore').decode('utf-8')
-
-completion = client.chat.completions.create(
-    model=MODEL,
-    messages=[{"role": "user", "content": clean_prompt}],
-    temperature=0.3
-)
+    completion = client.chat.completions.create(
+        model=MODEL,
+        messages=[{"role": "user", "content": clean_prompt}],
+        temperature=0.3
+    )
 
     raw = completion.choices[0].message.content
     return _safe_json(raw)
