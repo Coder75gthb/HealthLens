@@ -2,7 +2,7 @@
 
 > Preventive, explainable health risk estimation — not a diagnosis.
 
-🔗 **Live Demo:** [Click here](YOUR_LINK_HERE)
+🔗 **Live Demo:** [Click here](https://healthlens-rvyd7ypgzyywjtsnd9chng.streamlit.app/)
 
 HealthLens is an AI-powered preventive health intelligence web app that estimates your risk for multiple chronic conditions, simulates how that risk may evolve over time, and gives you a personalized, explainable action plan — all from basic lifestyle and clinical inputs.
 
@@ -81,29 +81,22 @@ Four separate binary classifiers are trained — one per condition:
 ---
 
 ## Project Structure
-healthlens/
-├── app.py                          # Main Streamlit application
-├── data/
-│   ├── raw/                        # Original datasets
-│   └── processed/                  # Feature-engineered CSVs
-├── models/
-│   ├── diabetes_logistic.py        # Diabetes model training
-│   ├── diabetes_random_forest.py   # Random Forest comparison
-│   ├── heart_logistic.py           # Heart disease model training
-│   ├── diabetes_model.pkl          # Saved diabetes model
-│   ├── diabetes_scaler.pkl         # Saved diabetes scaler
-│   ├── heart_model.pkl             # Saved heart model
-│   └── heart_scaler.pkl            # Saved heart scaler
-├── interaction_engine/
-│   ├── risk_engine.py              # Risk scoring logic
-│   ├── explanations.py             # SHAP-based explanations
-│   ├── food_engine.py              # Food insights via Groq
-│   └── roadmap_engine.py           # Lifestyle blueprint via Groq
-├── explainability/                 # SHAP utilities
-├── guidance/                       # Condition-specific guidance content
-├── simulation/                     # Risk trajectory simulation logic
-├── requirements.txt
-└── runtime.txt
+
+| File / Folder | Purpose |
+|---|---|
+| `app.py` | Main Streamlit application |
+| `data/raw/` | Original datasets |
+| `data/processed/` | Feature-engineered CSVs |
+| `models/` | Model training scripts + saved `.pkl` files |
+| `interaction_engine/risk_engine.py` | Risk scoring logic |
+| `interaction_engine/explanations.py` | SHAP-based explanations |
+| `interaction_engine/food_engine.py` | Food insights via Groq |
+| `interaction_engine/roadmap_engine.py` | Lifestyle blueprint via Groq |
+| `explainability/` | SHAP utilities |
+| `guidance/` | Condition-specific guidance content |
+| `simulation/` | Risk trajectory simulation logic |
+| `requirements.txt` | Python dependencies |
+| `runtime.txt` | Python version for Streamlit Cloud |
 
 ---
 
